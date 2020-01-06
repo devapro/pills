@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_diary"
+        android:icon="@drawable/ic_diary"
+        android:title="@string/bottom_menu_diary" />
+    <item
+        android:id="@+id/tab_medication"
+        android:icon="@drawable/ic_medication"
+        android:title="@string/bottom_menu_medication" />
+    <item
+        android:id="@+id/tab_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/bottom_menu_settings" />
+    <item
+        android:id="@+id/tab_reports"
+        android:icon="@drawable/ic_reports"
+        android:title="@string/bottom_menu_reports" />
+</menu>
