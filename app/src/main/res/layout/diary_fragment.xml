@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Morning"
+                android:text="@string/diary_morning"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -69,7 +69,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Afternoon"
+                android:text="@string/diary_afternoon"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -94,7 +94,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Evening"
+                android:text="@string/diary_evening"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -119,7 +119,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Night"
+                android:text="@string/diary_night"
                 android:textColor="@color/colorBlack"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -153,15 +153,8 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/ic_btn_bg"
-            android:text="Add a med"
-            android:textAllCaps="false"
-            android:textColor="@color/colorWhite"
-            android:textSize="20sp"
+            style="@style/AddButton"
+            android:text="@string/add_med"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
