@@ -6,13 +6,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import pro.devapp.medecine.MainPagerAdapter
+import pro.devapp.medecine.logic.adapters.MainPagerAdapter
 import pro.devapp.medecine.MainScreen
 import pro.devapp.medecine.getMainScreenForMenuItem
 
 class TabsViewModel(fm : FragmentManager) : ViewModel() {
     var listener : ActionListener? = null
-    var mainPagerAdapter : MainPagerAdapter = MainPagerAdapter(fm)
+    val mainPagerAdapter : MainPagerAdapter =
+        MainPagerAdapter(fm)
 
     init {
         mainPagerAdapter.setItems(arrayListOf(MainScreen.DIARY, MainScreen.MEDICATION, MainScreen.SETTINGS, MainScreen.REPORTS))

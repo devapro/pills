@@ -9,14 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.IdRes
 import androidx.databinding.DataBindingUtil
-import androidx.viewpager.widget.ViewPager
 import pro.devapp.medecine.MainActivity
-import pro.devapp.medecine.MainPagerAdapter
 import pro.devapp.medecine.MainScreen
 
 import pro.devapp.medecine.R
 import pro.devapp.medecine.databinding.TabsFragmentBinding
-import pro.devapp.medecine.logic.viewModel.MainViewModel
 import pro.devapp.medecine.logic.viewModel.TabsViewModel
 
 class TabsFragment : Fragment() {

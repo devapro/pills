@@ -13,29 +13,30 @@
         android:layout_height="match_parent"
         tools:context=".ui.tabs.MedecineListFragment">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/medecine_list_pager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabBackground="@color/colorPrimary"
-            app:tabTextColor="@color/colorWhiteGray"
-            app:tabSelectedTextColor="@color/colorWhite"
-            app:tabIndicatorHeight="3dp"
+            android:layout_height="match_parent"
+            app:adapter="@{model.medecinePagerAdapter}"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:onPageChangeListener="@{model.pageChangeListener}">
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tab_medicines_schedule" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabBackground="@color/colorPrimary"
+                app:tabIndicatorHeight="3dp"
+                app:tabSelectedTextColor="@color/colorWhite"
+                app:tabTextColor="@color/colorWhiteGray" />
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tab_medicines_necessary" />
-
-        </com.google.android.material.tabs.TabLayout>
+        </androidx.viewpager.widget.ViewPager>
 
         <Button
             android:id="@+id/button"

@@ -9,30 +9,30 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 
 import pro.devapp.medecine.R
-import pro.devapp.medecine.databinding.MedecineListFragmentBinding
-import pro.devapp.medecine.logic.viewModel.MedecineListViewModel
+import pro.devapp.medecine.databinding.MedecineNecessaryFragmentBinding
+import pro.devapp.medecine.logic.viewModel.MedecineNecessaryViewModel
 
-class MedecineListFragment : Fragment() {
+class MedecineNecessaryFragment : Fragment() {
 
-    var mBinding : MedecineListFragmentBinding? = null
+    private var mBinding: MedecineNecessaryFragmentBinding? = null
 
     companion object {
-        fun newInstance() = MedecineListFragment()
+        fun newInstance() = MedecineNecessaryFragment()
     }
 
-    private lateinit var viewModel: MedecineListViewModel
+    private lateinit var viewModel: MedecineNecessaryViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.medecine_list_fragment, container, false)
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.medecine_necessary_fragment, container, false)
         return mBinding?.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this, MedecineListViewModel.createFactory(activity!!.supportFragmentManager, activity!!)).get(MedecineListViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(MedecineNecessaryViewModel::class.java)
         mBinding?.model = viewModel
     }
 
