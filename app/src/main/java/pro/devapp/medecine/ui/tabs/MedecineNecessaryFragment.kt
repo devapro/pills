@@ -27,6 +27,7 @@ class MedecineNecessaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.medecine_necessary_fragment, container, false)
+        mBinding?.lifecycleOwner = this
         return mBinding?.root
     }
 

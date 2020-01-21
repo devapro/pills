@@ -27,12 +27,13 @@ class MedecineListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.medecine_list_fragment, container, false)
+        mBinding?.lifecycleOwner = this
         return mBinding?.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this, MedecineListViewModel.createFactory(activity!!.supportFragmentManager, activity!!)).get(MedecineListViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, MedecineListViewModel.createFactory(childFragmentManager, activity!!)).get(MedecineListViewModel::class.java)
         mBinding?.model = viewModel
     }
 

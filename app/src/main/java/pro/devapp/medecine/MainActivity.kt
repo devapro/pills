@@ -7,10 +7,6 @@ import android.view.View.VISIBLE
 import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import pro.devapp.medecine.databinding.ActivityMainBinding
 import pro.devapp.medecine.logic.viewModel.MainViewModel
 
@@ -21,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         mainBinding.model = ViewModelProviders.of(this).get(MainViewModel::class.java)
-
+        mainBinding.lifecycleOwner = this
         setSupportActionBar(mainBinding.toolbar)
 
     }

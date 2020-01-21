@@ -27,6 +27,7 @@ class DiaryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.diary_fragment, container, false)
+        mBinding?.lifecycleOwner = this
         return mBinding?.root
     }
 

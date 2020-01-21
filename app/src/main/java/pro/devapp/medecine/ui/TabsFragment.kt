@@ -26,6 +26,7 @@ class TabsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.tabs_fragment, container, false)
+        mBinding?.lifecycleOwner = this
         val defaultScreen = MainScreen.DIARY
         scrollToScreen(defaultScreen)
         selectBottomNavigationViewMenuItem(defaultScreen.menuItemId)

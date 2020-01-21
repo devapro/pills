@@ -26,6 +26,7 @@ class MedecineViewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.medecine_view_fragment, container, false)
+        mBinding?.lifecycleOwner = this
         return mBinding?.root
     }
 

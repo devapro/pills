@@ -27,6 +27,7 @@ class MedecineScheduledFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         mBinding = DataBindingUtil.inflate(inflater, R.layout.medecine_scheduled_fragment, container, false)
+        mBinding?.lifecycleOwner = this
         return mBinding?.root
     }
 
