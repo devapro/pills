@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import pro.devapp.medecine.R
-import pro.devapp.medecine.ui.tabs.MedecineNecessaryFragment
-import pro.devapp.medecine.ui.tabs.MedecineScheduledFragment
+import pro.devapp.medecine.ui.screens.tabs.medication.necessary.MedecineNecessaryFragment
+import pro.devapp.medecine.ui.screens.tabs.medication.scheduled.MedecineScheduledFragment
 
 class MedecinePagerAdapter(fm : FragmentManager, c: Context) : FragmentPagerAdapter(fm){
 

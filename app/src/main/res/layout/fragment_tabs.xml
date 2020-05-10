@@ -5,13 +5,13 @@
     <data>
         <variable
             name="model"
-            type="pro.devapp.medecine.logic.viewModel.TabsViewModel" />
+            type="pro.devapp.medecine.ui.screens.tabs.TabsViewModel" />
         <import type="android.view.View" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.TabsFragment">
+        tools:context=".ui.screens.tabs.TabsFragment">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/view_pager"

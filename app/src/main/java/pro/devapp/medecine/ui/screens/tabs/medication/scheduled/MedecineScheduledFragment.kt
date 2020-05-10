@@ -1,4 +1,4 @@
-package pro.devapp.medecine.ui.tabs
+package pro.devapp.medecine.ui.screens.tabs.medication.scheduled
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -9,15 +9,15 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 
 import pro.devapp.medecine.R
-import pro.devapp.medecine.databinding.MedecineScheduledFragmentBinding
-import pro.devapp.medecine.logic.viewModel.MedecineScheduledViewModel
+import pro.devapp.medecine.databinding.FragmentMedecineScheduledBinding
 
 class MedecineScheduledFragment : Fragment() {
 
-    private var mBinding : MedecineScheduledFragmentBinding? = null
+    private var mBinding : FragmentMedecineScheduledBinding? = null
 
     companion object {
-        fun newInstance() = MedecineScheduledFragment()
+        fun newInstance() =
+            MedecineScheduledFragment()
     }
 
     private lateinit var viewModel: MedecineScheduledViewModel
@@ -26,7 +26,7 @@ class MedecineScheduledFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.medecine_scheduled_fragment, container, false)
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_medecine_scheduled, container, false)
         mBinding?.lifecycleOwner = this
         return mBinding?.root
     }

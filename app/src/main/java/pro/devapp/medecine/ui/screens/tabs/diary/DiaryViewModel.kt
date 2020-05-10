@@ -1,4 +1,4 @@
-package pro.devapp.medecine.logic.viewModel
+package pro.devapp.medecine.ui.screens.tabs.diary
 
 import android.view.View
 import androidx.lifecycle.ViewModel

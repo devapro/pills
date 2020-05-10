@@ -5,13 +5,13 @@
     <data>
         <variable
             name="model"
-            type="pro.devapp.medecine.logic.viewModel.DiaryViewModel" />
+            type="pro.devapp.medecine.ui.screens.tabs.diary.DiaryViewModel" />
         <import type="android.view.View" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.tabs.DiaryFragment">
+        tools:context=".ui.screens.tabs.diary.DiaryFragment">
 
         <ImageView
             android:id="@+id/imageView"

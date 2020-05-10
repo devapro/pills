@@ -1,4 +1,4 @@
-package pro.devapp.medecine.ui.tabs
+package pro.devapp.medecine.ui.screens.tabs.reports
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -8,26 +8,25 @@ import android.view.View
 import android.view.ViewGroup
 
 import pro.devapp.medecine.R
-import pro.devapp.medecine.logic.viewModel.SettingsViewModel
 
-class SettingsFragment : Fragment() {
+class ReportsFragment : Fragment() {
 
     companion object {
-        fun newInstance() = SettingsFragment()
+        fun newInstance() = ReportsFragment()
     }
 
-    private lateinit var viewModel: SettingsViewModel
+    private lateinit var viewModel: ReportsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.settings_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_reports, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(SettingsViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(ReportsViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

@@ -1,4 +1,4 @@
-package pro.devapp.medecine.logic.viewModel
+package pro.devapp.medecine.ui.screens.viewMedicine
 
 import android.view.View
 import androidx.lifecycle.ViewModel

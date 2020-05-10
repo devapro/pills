@@ -1,4 +1,4 @@
-package pro.devapp.medecine.ui
+package pro.devapp.medecine.ui.screens.tabs.diary
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -7,32 +7,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+
 import pro.devapp.medecine.R
-import pro.devapp.medecine.databinding.MedecineViewFragmentBinding
-import pro.devapp.medecine.logic.viewModel.MedecineViewViewModel
+import pro.devapp.medecine.databinding.FragmentDiaryBinding
 
-class MedecineViewFragment : Fragment() {
+class DiaryFragment : Fragment() {
 
-    var mBinding : MedecineViewFragmentBinding? = null
+    var mBinding: FragmentDiaryBinding? = null
 
     companion object {
-        fun newInstance() = MedecineViewFragment()
+        fun newInstance() = DiaryFragment()
     }
 
-    private lateinit var viewModel: MedecineViewViewModel
+    private lateinit var viewModel: DiaryViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.medecine_view_fragment, container, false)
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_diary, container, false)
         mBinding?.lifecycleOwner = this
         return mBinding?.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MedecineViewViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(DiaryViewModel::class.java)
         mBinding?.model = viewModel
     }
+
 }

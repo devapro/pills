@@ -6,6 +6,6 @@
     app:startDestination="@id/tabsFragment">
     <fragment
         android:id="@+id/tabsFragment"
-        android:name="pro.devapp.medecine.ui.TabsFragment"
+        android:name="pro.devapp.medecine.ui.screens.tabs.TabsFragment"
         android:label="TabsFragment" />
 </navigation>

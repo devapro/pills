@@ -5,13 +5,13 @@
     <data>
         <variable
             name="model"
-            type="pro.devapp.medecine.logic.viewModel.SettingsViewModel" />
+            type="pro.devapp.medecine.ui.screens.tabs.reports.ReportsViewModel" />
         <import type="android.view.View" />
     </data>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.tabs.SettingsFragment">
+        tools:context=".ui.screens.tabs.reports.ReportsFragment">
 
         <TextView
             android:layout_width="match_parent"

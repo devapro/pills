@@ -1,4 +1,4 @@
-package pro.devapp.medecine.logic.viewModel
+package pro.devapp.medecine.ui.screens.tabs.settings
 
 import androidx.lifecycle.ViewModel
 

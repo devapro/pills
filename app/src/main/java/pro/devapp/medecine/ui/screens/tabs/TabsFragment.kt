@@ -1,4 +1,4 @@
-package pro.devapp.medecine.ui
+package pro.devapp.medecine.ui.screens.tabs
 
 import android.content.Context
 import androidx.lifecycle.ViewModelProviders
@@ -13,19 +13,18 @@ import pro.devapp.medecine.MainActivity
 import pro.devapp.medecine.MainScreen
 
 import pro.devapp.medecine.R
-import pro.devapp.medecine.databinding.TabsFragmentBinding
-import pro.devapp.medecine.logic.viewModel.TabsViewModel
+import pro.devapp.medecine.databinding.FragmentTabsBinding
 
 class TabsFragment : Fragment() {
 
-    private var mBinding : TabsFragmentBinding? = null
+    private var mBinding : FragmentTabsBinding? = null
     private lateinit var viewModel: TabsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.tabs_fragment, container, false)
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_tabs, container, false)
         mBinding?.lifecycleOwner = this
         val defaultScreen = MainScreen.DIARY
         scrollToScreen(defaultScreen)
@@ -37,7 +36,8 @@ class TabsFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         if(mBinding?.model == null){
-            viewModel = ViewModelProviders.of(this, TabsViewModel.createFactory(activity!!.supportFragmentManager)).get(TabsViewModel::class.java)
+            viewModel = ViewModelProviders.of(this, TabsViewModel.createFactory(activity!!.supportFragmentManager)).get(
+                TabsViewModel::class.java)
             mBinding?.model = viewModel
             mBinding?.model?.listener = listener
         }

@@ -1,4 +1,4 @@
-package pro.devapp.medecine.logic.viewModel
+package pro.devapp.medecine.ui.screens.tabs.medication.scheduled
 
 import androidx.lifecycle.ViewModel
 

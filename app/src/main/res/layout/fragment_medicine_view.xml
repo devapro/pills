@@ -5,13 +5,13 @@
     <data>
         <variable
             name="model"
-            type="pro.devapp.medecine.logic.viewModel.MedecineViewViewModel" />
+            type="pro.devapp.medecine.ui.screens.viewMedicine.MedecineViewViewModel" />
         <import type="android.view.View" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MedecineViewFragment">
+        tools:context=".ui.screens.viewMedicine.MedicineViewFragment">
 
         <TextView
             android:id="@+id/textView3"

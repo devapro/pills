@@ -5,19 +5,18 @@
     <data>
         <variable
             name="model"
-            type="pro.devapp.medecine.logic.viewModel.MedecineNecessaryViewModel" />
+            type="pro.devapp.medecine.ui.screens.tabs.settings.SettingsViewModel" />
         <import type="android.view.View" />
     </data>
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".ui.tabs.MedecineNecessaryFragment">
+        tools:context=".ui.screens.tabs.settings.SettingsFragment">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Hello" />
 
-    </LinearLayout>
+    </FrameLayout>
 </layout>

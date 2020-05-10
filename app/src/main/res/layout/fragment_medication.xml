@@ -5,13 +5,13 @@
     <data>
         <variable
             name="model"
-            type="pro.devapp.medecine.logic.viewModel.MedecineListViewModel" />
+            type="pro.devapp.medecine.ui.screens.tabs.medication.MedecicationViewModel" />
         <import type="android.view.View" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.tabs.MedecineListFragment">
+        tools:context=".ui.screens.tabs.medication.MedicationFragment">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/medecine_list_pager"

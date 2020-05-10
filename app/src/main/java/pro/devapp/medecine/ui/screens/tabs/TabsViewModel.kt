@@ -1,4 +1,4 @@
-package pro.devapp.medecine.logic.viewModel
+package pro.devapp.medecine.ui.screens.tabs
 
 import android.view.MenuItem
 import androidx.fragment.app.FragmentManager
@@ -21,7 +21,9 @@ class TabsViewModel(fm : FragmentManager) : ViewModel() {
 
     companion object {
         fun createFactory(fm : FragmentManager) : ViewModelProvider.Factory {
-            return ViewModelFactory(fm)
+            return ViewModelFactory(
+                fm
+            )
         }
     }
 
@@ -46,7 +48,8 @@ class TabsViewModel(fm : FragmentManager) : ViewModel() {
     class ViewModelFactory(fm: FragmentManager): ViewModelProvider.NewInstanceFactory() {
         private val fragmentManager = fm
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            val viewModel = TabsViewModel(fragmentManager)
+            val viewModel =
+                TabsViewModel(fragmentManager)
             return viewModel as T
         }
     }

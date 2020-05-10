@@ -1,4 +1,4 @@
-package pro.devapp.medecine.logic.viewModel
+package pro.devapp.medecine.ui.screens.tabs.medication
 
 import android.content.Context
 import androidx.fragment.app.Fragment
@@ -8,13 +8,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import pro.devapp.medecine.logic.adapters.MedecinePagerAdapter
 
-class MedecineListViewModel(fm: FragmentManager, c: Context) : ViewModel() {
+class MedecicationViewModel(fm: FragmentManager, c: Context) : ViewModel() {
     var listener : ActionListener? = null
     val medecinePagerAdapter = MedecinePagerAdapter(fm, c)
 
     companion object {
         fun createFactory(fm : FragmentManager, c: Context) : ViewModelProvider.Factory {
-            return ViewModelFactory(fm, c)
+            return ViewModelFactory(
+                fm,
+                c
+            )
         }
     }
 
@@ -30,7 +33,11 @@ class MedecineListViewModel(fm: FragmentManager, c: Context) : ViewModel() {
         private val fragmentManager = fm
         private val context = c
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            val viewModel = MedecineListViewModel(fragmentManager, context)
+            val viewModel =
+                MedecicationViewModel(
+                    fragmentManager,
+                    context
+                )
             return viewModel as T
         }
     }
