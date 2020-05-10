@@ -5,7 +5,7 @@
     <data>
         <variable
             name="model"
-            type="pro.devapp.medecine.ui.screens.tabs.medication.MedecicationViewModel" />
+            type="pro.devapp.medecine.ui.screens.tabs.medication.MedicationViewModel" />
         <import type="android.view.View" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +17,7 @@
             android:id="@+id/medecine_list_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:adapter="@{model.medecinePagerAdapter}"
+            app:adapter="@{model.medicinePagerAdapter}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -5,13 +5,13 @@
     <data>
         <variable
             name="model"
-            type="pro.devapp.medecine.ui.screens.tabs.medication.scheduled.MedecineScheduledViewModel" />
+            type="pro.devapp.medecine.ui.screens.tabs.medication.scheduled.MedicineScheduledViewModel" />
         <import type="android.view.View" />
     </data>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.screens.tabs.medication.scheduled.MedecineScheduledFragment">
+        tools:context=".ui.screens.tabs.medication.scheduled.MedicineScheduledFragment">
 
         <TextView
             android:layout_width="wrap_content"

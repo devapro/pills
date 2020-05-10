@@ -1,5 +1,6 @@
 package pro.devapp.medecine.ui.screens.tabs
 
+import android.app.Application
 import android.view.MenuItem
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModel
@@ -7,29 +8,20 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import pro.devapp.medecine.logic.adapters.MainPagerAdapter
-import pro.devapp.medecine.MainScreen
-import pro.devapp.medecine.getMainScreenForMenuItem
+import pro.devapp.medecine.logic.viewModel.BaseViewModel
 
-class TabsViewModel(fm : FragmentManager) : ViewModel() {
+class TabsViewModel(application: Application, fm : FragmentManager) : BaseViewModel(application) {
     var listener : ActionListener? = null
-    val mainPagerAdapter : MainPagerAdapter =
-        MainPagerAdapter(fm)
+    val mainPagerAdapter : MainPagerAdapter = MainPagerAdapter(fm)
 
     init {
         mainPagerAdapter.setItems(arrayListOf(MainScreen.DIARY, MainScreen.MEDICATION, MainScreen.SETTINGS, MainScreen.REPORTS))
     }
 
-    companion object {
-        fun createFactory(fm : FragmentManager) : ViewModelProvider.Factory {
-            return ViewModelFactory(
-                fm
-            )
-        }
-    }
-
     val bottomNavigationListener = object : BottomNavigationView.OnNavigationItemSelectedListener{
         override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
-            getMainScreenForMenuItem(menuItem.itemId)?.let {
+            getMainScreenForMenuItem(menuItem.itemId)
+                ?.let {
                 listener?.onNavigationItemSelected(it)
                 return true
             }
@@ -45,11 +37,9 @@ class TabsViewModel(fm : FragmentManager) : ViewModel() {
     }
 
     @Suppress("UNCHECKED_CAST")
-    class ViewModelFactory(fm: FragmentManager): ViewModelProvider.NewInstanceFactory() {
-        private val fragmentManager = fm
+    class ViewModelFactory(private val application: Application, private val fragmentManager: FragmentManager): ViewModelProvider.NewInstanceFactory() {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            val viewModel =
-                TabsViewModel(fragmentManager)
+            val viewModel = TabsViewModel(application, fragmentManager)
             return viewModel as T
         }
     }

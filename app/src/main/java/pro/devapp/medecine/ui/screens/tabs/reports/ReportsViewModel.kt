@@ -1,7 +1,7 @@
 package pro.devapp.medecine.ui.screens.tabs.reports
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import pro.devapp.medecine.logic.viewModel.BaseViewModel
 
-class ReportsViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class ReportsViewModel(application: Application) : BaseViewModel(application) {
 }

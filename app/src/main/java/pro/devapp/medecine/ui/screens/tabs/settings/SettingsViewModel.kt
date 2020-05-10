@@ -1,7 +1,7 @@
 package pro.devapp.medecine.ui.screens.tabs.settings
 
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import pro.devapp.medecine.logic.viewModel.BaseViewModel
 
-class SettingsViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class SettingsViewModel(application: Application) : BaseViewModel(application) {
 }

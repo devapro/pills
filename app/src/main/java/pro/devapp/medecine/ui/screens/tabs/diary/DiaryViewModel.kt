@@ -1,9 +1,7 @@
 package pro.devapp.medecine.ui.screens.tabs.diary
 
-import android.view.View
-import androidx.lifecycle.ViewModel
+import android.app.Application
+import pro.devapp.medecine.logic.viewModel.BaseViewModel
 
-class DiaryViewModel : ViewModel() {
-    fun onNextClick(v : View){
-    }
+class DiaryViewModel(application: Application) : BaseViewModel(application) {
 }

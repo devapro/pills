@@ -5,14 +5,14 @@
     <data>
         <variable
             name="model"
-            type="pro.devapp.medecine.ui.screens.tabs.medication.necessary.MedecineNecessaryViewModel" />
+            type="pro.devapp.medecine.ui.screens.tabs.medication.necessary.MedicineNecessaryViewModel" />
         <import type="android.view.View" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".ui.screens.tabs.medication.necessary.MedecineNecessaryFragment">
+        tools:context=".ui.screens.tabs.medication.necessary.MedicineNecessaryFragment">
 
         <TextView
             android:layout_width="match_parent"

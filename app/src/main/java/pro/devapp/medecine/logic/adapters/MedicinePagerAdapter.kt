@@ -5,22 +5,21 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import pro.devapp.medecine.R
-import pro.devapp.medecine.ui.screens.tabs.medication.necessary.MedecineNecessaryFragment
-import pro.devapp.medecine.ui.screens.tabs.medication.scheduled.MedecineScheduledFragment
+import pro.devapp.medecine.ui.screens.tabs.medication.necessary.MedicineNecessaryFragment
+import pro.devapp.medecine.ui.screens.tabs.medication.scheduled.MedicineScheduledFragment
 
-class MedecinePagerAdapter(fm : FragmentManager, c: Context) : FragmentPagerAdapter(fm){
+class MedicinePagerAdapter(fm : FragmentManager, private val context: Context) : FragmentPagerAdapter(fm){
 
     private val NUM_ITEMS = 2
-    private val context = c
 
     /**
      * Return the Fragment associated with a specified position.
      */
     override fun getItem(position: Int): Fragment {
         return when(position){
-            0 -> MedecineScheduledFragment.newInstance()
-            1 -> MedecineNecessaryFragment.newInstance()
-            else -> MedecineScheduledFragment.newInstance()
+            0 -> MedicineScheduledFragment.newInstance()
+            1 -> MedicineNecessaryFragment.newInstance()
+            else -> MedicineScheduledFragment.newInstance()
         }
     }
 

@@ -3,7 +3,7 @@ package pro.devapp.medecine.logic.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import pro.devapp.medecine.MainScreen
+import pro.devapp.medecine.ui.screens.tabs.MainScreen
 
 class MainPagerAdapter(fm : FragmentManager) : FragmentStatePagerAdapter(fm) {
 
