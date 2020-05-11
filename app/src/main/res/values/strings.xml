@@ -12,4 +12,5 @@
     <string name="tab_medicines_necessary">Necessary</string>
     <string name="add_med">Add a med</string>
     <string name="add_med_title">Add a med</string>
+    <string name="done">Done</string>
 </resources>
