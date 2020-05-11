@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Medecine</string>
+    <string name="app_name">Pills</string>
     <string name="bottom_menu_diary">Diary</string>
     <string name="bottom_menu_medication">Medication</string>
     <string name="bottom_menu_settings">Settings</string>
@@ -11,4 +11,5 @@
     <string name="tab_medicines_schedule">Schedule</string>
     <string name="tab_medicines_necessary">Necessary</string>
     <string name="add_med">Add a med</string>
+    <string name="add_med_title">Add a med</string>
 </resources>

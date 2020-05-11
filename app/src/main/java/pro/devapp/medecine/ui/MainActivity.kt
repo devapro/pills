@@ -1,4 +1,4 @@
-package pro.devapp.medecine
+package pro.devapp.medecine.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,8 +7,7 @@ import android.view.View.VISIBLE
 import androidx.activity.viewModels
 import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.findNavController
+import pro.devapp.medecine.R
 import pro.devapp.medecine.databinding.ActivityMainBinding
 import pro.devapp.medecine.logic.viewModel.MainViewModel
 
@@ -19,10 +18,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        mainBinding = DataBindingUtil.setContentView(this,
+            R.layout.activity_main
+        )
         mainBinding.model = viewModel
         mainBinding.lifecycleOwner = this
         setSupportActionBar(mainBinding.toolbar)
+
+        //color for back arrow
 
     }
 

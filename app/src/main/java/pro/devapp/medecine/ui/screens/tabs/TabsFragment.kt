@@ -1,21 +1,18 @@
 package pro.devapp.medecine.ui.screens.tabs
 
 import android.os.Bundle
-import android.os.Handler
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.IdRes
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
-import pro.devapp.medecine.MainActivity
+import pro.devapp.medecine.ui.MainActivity
 import pro.devapp.medecine.R
 import pro.devapp.medecine.databinding.FragmentTabsBinding
+import pro.devapp.medecine.ui.NavigationFragment
 import pro.devapp.medecine.utils.dataBinding
 
-class TabsFragment : Fragment() {
+class TabsFragment : NavigationFragment() {
 
     private val mBinding by dataBinding<FragmentTabsBinding>(R.layout.fragment_tabs)
     private val viewModel by viewModels<TabsViewModel> {
@@ -64,8 +61,8 @@ class TabsFragment : Fragment() {
     private fun setScreenTitle(mainScreen: MainScreen){
         if(activity != null) {
             val mainActivity = activity as MainActivity
-            mainActivity.setScreenTitle(mainScreen.titleStringId)
-            mainActivity.toggleToolBar(true)
+            setScreenTitle(mainScreen.titleStringId)
+            toggleToolBar(true)
         }
     }
 
