@@ -9,15 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import pro.devapp.medecine.R
 import pro.devapp.medecine.databinding.FragmentMedicineEditBinding
+import pro.devapp.medecine.utils.dataBinding
 
 class EditMedicineFragment : Fragment() {
 
     private val viewModel by viewModels<MedicineEditViewModel>()
-    private lateinit var mBinding: FragmentMedicineEditBinding
+    private val mBinding by dataBinding<FragmentMedicineEditBinding>(R.layout.fragment_medicine_edit)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_medecine_necessary, container, false)
-        mBinding.lifecycleOwner = this
         return mBinding.root
     }
 

@@ -12,25 +12,28 @@ import pro.devapp.medecine.ui.screens.tabs.settings.SettingsFragment
 
 enum class MainScreen (@IdRes val menuItemId: Int,
                        @DrawableRes val menuItemIconId: Int,
-                       @StringRes val titleStringId: Int,
-                       val fragment: Fragment
+                       @StringRes val titleStringId: Int
 ) {
     DIARY(
         R.id.tab_diary,
         R.drawable.ic_diary,
-        R.string.bottom_menu_diary, DiaryFragment.newInstance()),
+        R.string.bottom_menu_diary
+    ),
     MEDICATION(
         R.id.tab_medication,
         R.drawable.ic_medication,
-        R.string.bottom_menu_medication, MedicationFragment.newInstance()),
+        R.string.bottom_menu_medication
+    ),
     SETTINGS(
         R.id.tab_settings,
         R.drawable.ic_settings,
-        R.string.bottom_menu_settings, SettingsFragment.newInstance()),
+        R.string.bottom_menu_settings
+    ),
     REPORTS(
         R.id.tab_reports,
         R.drawable.ic_reports,
-        R.string.bottom_menu_reports, ReportsFragment.newInstance()),
+        R.string.bottom_menu_reports
+    ),
 }
 
 fun getMainScreenForMenuItem(menuItemId: Int): MainScreen? {

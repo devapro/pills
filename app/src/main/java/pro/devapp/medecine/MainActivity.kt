@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
 import pro.devapp.medecine.databinding.ActivityMainBinding
 import pro.devapp.medecine.logic.viewModel.MainViewModel
 

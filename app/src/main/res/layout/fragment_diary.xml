@@ -155,6 +155,7 @@
             android:id="@+id/button"
             style="@style/AddButton"
             android:text="@string/add_med"
+            android:onClick="@{model::onClickAdd}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

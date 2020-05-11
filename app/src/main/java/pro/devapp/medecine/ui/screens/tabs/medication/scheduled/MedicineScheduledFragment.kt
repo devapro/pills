@@ -6,28 +6,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import pro.devapp.medecine.R
 import pro.devapp.medecine.databinding.FragmentMedecineScheduledBinding
+import pro.devapp.medecine.utils.dataBinding
 
 class MedicineScheduledFragment : Fragment() {
-
-    private lateinit var mBinding : FragmentMedecineScheduledBinding
 
     companion object {
         fun newInstance() =
             MedicineScheduledFragment()
     }
 
+    private val mBinding by dataBinding<FragmentMedecineScheduledBinding>(R.layout.fragment_medecine_scheduled)
     private val viewModel by viewModels<MedicineScheduledViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_medecine_scheduled, container, false)
-        mBinding.lifecycleOwner = this
         return mBinding.root
     }
 

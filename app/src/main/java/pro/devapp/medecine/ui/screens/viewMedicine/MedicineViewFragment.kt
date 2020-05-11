@@ -6,22 +6,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import pro.devapp.medecine.R
 import pro.devapp.medecine.databinding.FragmentMedicineViewBinding
+import pro.devapp.medecine.utils.dataBinding
 
 class MedicineViewFragment : Fragment() {
 
-    private lateinit var mBinding : FragmentMedicineViewBinding
+    private val mBinding by dataBinding<FragmentMedicineViewBinding>(R.layout.fragment_medicine_view)
     private val viewModel by viewModels<MedicineViewViewModel> ()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_medicine_view, container, false)
-        mBinding.lifecycleOwner = this
         return mBinding.root
     }
 

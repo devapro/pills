@@ -1,18 +1,23 @@
 package pro.devapp.medecine.ui.screens.tabs
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.IdRes
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import pro.devapp.medecine.MainActivity
+import pro.devapp.medecine.R
 import pro.devapp.medecine.databinding.FragmentTabsBinding
+import pro.devapp.medecine.utils.dataBinding
 
 class TabsFragment : Fragment() {
 
-    private lateinit var mBinding : FragmentTabsBinding
+    private val mBinding by dataBinding<FragmentTabsBinding>(R.layout.fragment_tabs)
     private val viewModel by viewModels<TabsViewModel> {
         TabsViewModel.ViewModelFactory(requireActivity().application, childFragmentManager)
     }
@@ -21,8 +26,6 @@ class TabsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mBinding = FragmentTabsBinding.inflate(inflater, container, false)
-        mBinding.lifecycleOwner = this
         val defaultScreen = MainScreen.DIARY
         scrollToScreen(defaultScreen)
         selectBottomNavigationViewMenuItem(defaultScreen.menuItemId)
@@ -32,18 +35,17 @@ class TabsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel.listener = listener
         mBinding.model = viewModel
     }
 
     override fun onStart() {
         super.onStart()
-        mBinding.model?.listener = listener
+        viewModel.listener = listener
     }
 
     override fun onStop() {
         super.onStop()
-        mBinding.model?.listener = null
+        viewModel.listener = null
     }
 
     /**
